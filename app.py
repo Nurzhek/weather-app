@@ -12,7 +12,7 @@ def index():
     return render_template('index.html', weather=weather)
 
 def get_weather(location):
-    api_url = f"http://api.weatherapi.com/v1/current.json?key=18ff27d5db9c4f5e8c384211230910&q={location}"
+    api_url = f"http://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q={location}" #insert your API in YOUR_API_KEY
     response = requests.get(api_url)
     if response.status_code == 200:
         return response.json()
